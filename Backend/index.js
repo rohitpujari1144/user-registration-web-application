@@ -10,7 +10,7 @@ const client = new MongoClient(dbUrl)
 const port = 6000
 
 // getting all users information
-app.get('/allUsers', async (req, res) => {
+app.get('/', async (req, res) => {
     const client = await MongoClient.connect(dbUrl)
     try {
         const db = await client.db('User_registration')
